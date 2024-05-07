@@ -10,6 +10,11 @@ import TemplateExpression from './components/TemplateExpressions'
 // 5 - hierarquia de componentes
 import MyComponent from './components/MyComponent'
 
+// 6 - eventos
+import Events from './components/Events'
+
+// 6 
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -20,6 +25,7 @@ function App() {
      <FirstComponets></FirstComponets>
      <TemplateExpression></TemplateExpression>
      <MyComponent></MyComponent>
+     <Events></Events>
     </>
   )
 }
