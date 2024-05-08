@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 
 // 2 - importando componente
@@ -16,7 +15,6 @@ import Events from './components/Events'
 // 6 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
