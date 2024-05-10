@@ -6,8 +6,8 @@ import night from './assets/night.jpg'
 // 3 - useState
 import { Data } from './components/Data'
 
-
-
+// 4 - rederizão de lista
+import ListRender from './components/ListRender'
 function App() {
 
   return (
@@ -21,6 +21,8 @@ function App() {
 
       {/* 3 - useState */}
       <Data></Data>
+      {/* 4 - rederizão de lista */}
+      <ListRender></ListRender>
     </>
   )
 }
