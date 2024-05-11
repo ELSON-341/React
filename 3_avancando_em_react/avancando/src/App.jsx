@@ -8,6 +8,9 @@ import { Data } from './components/Data'
 
 // 4 - rederizão de lista
 import ListRender from './components/ListRender'
+
+// 7 - render condicional 
+import ConditionalRender from './components/ConditionalRender'
 function App() {
 
   return (
@@ -23,6 +26,8 @@ function App() {
       <Data></Data>
       {/* 4 - rederizão de lista */}
       <ListRender></ListRender>
+      {/* 7 - render condicional  */}
+      <ConditionalRender></ConditionalRender>
     </>
   )
 }
