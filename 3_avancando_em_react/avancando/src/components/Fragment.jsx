@@ -1,8 +1,8 @@
 const Fragment = () => {
   return (
     <>
-      <div>Temos dois elementos pai</div>
-      <div>Este també é</div>
+      <div><h2>Temos dois elementos pai</h2></div>
+      <div><h2>Este també é</h2></div>
     </>
   )
 }
