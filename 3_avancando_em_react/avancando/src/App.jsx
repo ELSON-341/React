@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import './App.css'
 
 // 2 - imagem em assets
@@ -28,7 +30,26 @@ const cars = [
 // 12 - fragments
 import Fragment from './components/Fragment'
 
+// 13 - children prop
+import Container from './components/Container'
+
+// 14 - funçõa em prop
+import ExecutesFunction from './components/ExecutesFunction'
+
+// 15 - state lift
+import { Message } from './components/Message'
+import ChangeMessage from './components/ChangeMessage'
+
 function App() {
+  // 14 - funçõa em prop
+  const showMessage = () => console.log('Evento do componento pai.')
+
+  // 15 - state lift
+  const [message, setMessade] = useState('')
+
+  const handleMessage = (msg) => {
+    setMessade(msg)
+  }
 
   return (
     <>
@@ -59,6 +80,16 @@ function App() {
       ))}
       {/* 12 - fragments */}
       <Fragment></Fragment>
+      {/* 13 - children prop */}
+      <Container>
+        <h2>Testing</h2>
+        <p>My components</p>
+      </Container>
+      {/* 14 - funçõa em prop */}
+      <ExecutesFunction myFunction={showMessage}/>
+      {/* 15 - state lift */}
+      <Message msg={message}/>
+      <ChangeMessage handleMessage={handleMessage}/>
     </>
   )
 }
