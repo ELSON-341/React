@@ -40,16 +40,27 @@ import ExecutesFunction from './components/ExecutesFunction'
 import { Message } from './components/Message'
 import ChangeMessage from './components/ChangeMessage'
 
+// 15 - segundo exemplo
+import SwitchMessage from './components/SwitchMessage'
+import { ShowMessage } from './components/ShowMessage'
+
 function App() {
   // 14 - funçõa em prop
   const showMessage = () => console.log('Evento do componento pai.')
 
   // 15 - state lift
   const [message, setMessade] = useState('')
-
+  
   const handleMessage = (msg) => {
     setMessade(msg)
   }
+
+  // 15 - segundo exemplo
+  const [secondMessage, setSecondMessage] = useState('')
+
+  // const laborMessage = (msg1) => {
+  //   setSecondMessage(msg1)
+  // }
 
   return (
     <>
@@ -90,6 +101,9 @@ function App() {
       {/* 15 - state lift */}
       <Message msg={message}/>
       <ChangeMessage handleMessage={handleMessage}/>
+      {/* 15 - segundo exemplo */}
+      <ShowMessage msg={secondMessage}/>
+      <SwitchMessage otherMessage={setSecondMessage}/>
     </>
   )
 }
