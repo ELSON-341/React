@@ -4,13 +4,14 @@ import './components/Mycomponent.css'
 
 // 6 - css modules 
 import { Title } from "./components/Title"
+
 function App() {
   // 4 - CSS denâmico
   const n = 15
-
+  
   // classe dinâmicas 
   const redTitle = true
-
+  
   return (
     <>
       {/* 1 - CSS global */}
