@@ -1,4 +1,4 @@
-import {useState, userState} from 'react'
+import {useState} from 'react'
 
 export const Data = () => {
     let semoData = 10

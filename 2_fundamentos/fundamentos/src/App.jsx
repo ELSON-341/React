@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-    {/* 3 - comentorio JSX */}
+    {/* 3 - comentario JSX */}
      <h1>Fundamentos do react</h1>
      <FirstComponets></FirstComponets>
      <TemplateExpression></TemplateExpression>

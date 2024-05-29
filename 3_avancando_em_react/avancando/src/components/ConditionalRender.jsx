@@ -16,7 +16,7 @@ const ConditionalRender = () => {
             </div>
         ) : (
             <div>
-                <p>Olá {name}!</p>
+                <p>Bom dia {name}!</p>
             </div>
         )}
     </div>
