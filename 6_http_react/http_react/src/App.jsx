@@ -22,7 +22,28 @@ function App() {
   }, [])
 
   // 2 - envio de dados
-  
+  const [name, setName] = useState('')
+  const [price, setPrice] = useState('')
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    const products = {
+      name,
+      price
+    }
+    const res = await fetch(url, {
+      method:"POST",
+      headers: {
+        "content-Type": "application/json"
+      },
+      body: JSON.stringify(products)
+    })
+
+    // 3 - carregamento dinâmico de dados
+    const addedProduct = await res.json()
+    setProducts((prvProduct) => [...prvProduct, addedProduct])
+  }
 
   return (
     <>
@@ -33,6 +54,19 @@ function App() {
           <li>{product.name} - R$ {product.price}</li>
         </ul>
       ))}
+      <div className="add-product">
+        <form onSubmit={handleSubmit}>
+          <label>
+            <span>Nome:</span>
+            <input type="text" onChange={(e) => setName(e.target.value)} value={name}/>
+          </label>
+          <label>
+            <span>Preço:</span>
+            <input type="text" onChange={(e) => setPrice(e.target.value)} value={price}/>
+          </label>
+          <input type="submit" value="Enviar" />
+        </form>
+      </div>
     </>
   )
 }
