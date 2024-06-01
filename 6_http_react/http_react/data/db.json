@@ -54,6 +54,16 @@
       "id": "4263",
       "name": "controle",
       "price": "120"
+    },
+    {
+      "id": "cb92",
+      "name": "roupa",
+      "price": "100"
+    },
+    {
+      "id": "4dcc",
+      "name": "sapato",
+      "price": "100"
     }
   ]
 }
