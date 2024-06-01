@@ -34,6 +34,26 @@
       "id": "6802",
       "name": "tetando carregamento",
       "price": "200"
+    },
+    {
+      "id": "606d",
+      "name": "fone",
+      "price": "150"
+    },
+    {
+      "id": "3caf",
+      "name": "banana",
+      "price": "12"
+    },
+    {
+      "id": "c511",
+      "name": "cacal",
+      "price": "2.5"
+    },
+    {
+      "id": "4263",
+      "name": "controle",
+      "price": "120"
     }
   ]
 }

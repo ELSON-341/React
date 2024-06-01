@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useFetch } from './hooks/useFetch'
 
 const url = "http://localhost:3000/products"
 
@@ -7,19 +8,22 @@ import './App.css'
 function App() {
   // 1 - resgatando dados
   const [products, setProducts] = useState([])
-  
-  useEffect(() => {
 
-    async function getData() {
-      const res = await fetch(url)
+  // 4 - custom hook
+  const { data: items, httpConfig } = useFetch(url)
 
-      const data = await res.json()
+  // useEffect(() => {
 
-      setProducts(data)
-    }
+  //   async function getData() {
+  //     const res = await fetch(url)
 
-    getData()
-  }, [])
+  //     const data = await res.json()
+
+  //     setProducts(data)
+  //   }
+
+  //   getData()
+  // }, [])
 
   // 2 - envio de dados
   const [name, setName] = useState('')
@@ -28,28 +32,31 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
+    // 5 - refatorando o POST
     const products = {
       name,
       price
     }
-    const res = await fetch(url, {
-      method:"POST",
-      headers: {
-        "content-Type": "application/json"
-      },
-      body: JSON.stringify(products)
-    })
+    httpConfig(products, 'POST')
 
-    // 3 - carregamento dinâmico de dados
-    const addedProduct = await res.json()
-    setProducts((prvProduct) => [...prvProduct, addedProduct])
+    // const res = await fetch(url, {
+    //   method:"POST",
+    //   headers: {
+    //     "content-Type": "application/json"
+    //   },
+    //   body: JSON.stringify(products)
+    // })
+
+    // // 3 - carregamento dinâmico de dados
+    // const addedProduct = await res.json()
+    // setProducts((prvProduct) => [...prvProduct, addedProduct])
   }
 
   return (
     <>
       <h1>HTTP em React</h1>
       {/* 1 - resgate de dados */}
-      {products.map(product => (
+      {items && items.map(product => (
         <ul key={product.id}>
           <li>{product.name} - R$ {product.price}</li>
         </ul>
