@@ -9,7 +9,7 @@ const NavBar = () => {
         
         {/* 9 - link ativo */}
         <NavLink to="/" className={({isActive}) => (isActive ? 'active': "")}>Home</NavLink>
-        <NavLink to="/contact" className={({isActive}) => (isActive ? 'active': "")}>Contator</NavLink>
+        <NavLink to="/contact" className={({isActive}) => (isActive ? 'active' : '')}>Contator</NavLink>
     </nav>
   )
 }
