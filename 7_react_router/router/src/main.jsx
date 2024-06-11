@@ -9,7 +9,7 @@ import Contact from "./routes/Contanct.jsx"
 import ErrorPage from './routes/ErrorPage.jsx'
 
 // 1 - configurando router
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom"
+import { createBrowserRouter, RouterProvider, Navigate} from "react-router-dom"
 
 // 3  - componente base
 import Home from './routes/Home.jsx'
@@ -52,6 +52,11 @@ const router = createBrowserRouter([
       {
         path: "search",
         element: <Search/>,
+      },
+      // 11 - redirect
+      {
+        path: 'test',
+        element: <Navigate to="/"/>
       }
     ]
   },

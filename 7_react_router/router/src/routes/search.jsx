@@ -3,7 +3,9 @@ import {useFetch} from "../hooks/useFetch"
 import { Link, useSearchParams } from "react-router-dom"
 
 const Search = () => {
-    const [searchParams] = useSearchParams()
+  const [searchParams] = useSearchParams()
+
+  console.log(searchParams);
 
     const url = "http://localhost:3000/products?" + searchParams;
 
