@@ -1,4 +1,4 @@
-import React, { Children } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
@@ -8,6 +8,9 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 // conponents
 import Home from './routes/Home.jsx'
 import Contact from './routes/Contanct.jsx'
+
+// 2 - criar provider
+import { CounterContextProvider } from './context/CounterContext.jsx'
 
 const router = createBrowserRouter([
   {
@@ -28,6 +31,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <CounterContextProvider>
     <RouterProvider router={router}/>
+    </CounterContextProvider>
   </React.StrictMode>,
 )
