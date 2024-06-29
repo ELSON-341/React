@@ -7,7 +7,7 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
 // conponents
 import Home from './routes/Home.jsx'
-import Contact from './routes/Contanct.jsx'
+import Contact from './routes/Contact.jsx'
 
 // 2 - criar provider
 import { CounterContextProvider } from './context/CounterContext.jsx'

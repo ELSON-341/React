@@ -4,12 +4,12 @@ import { createContext, useState } from "react";
 export const CounterContext = createContext()
 
 // 2 - criar provaider
-export const CounterContextProvider = ({childred}) => {
+export const CounterContextProvider = ({children}) => {
     const [counter, setCounter] = useState(5)
 
     return (
         <CounterContext.Provider value={{counter, setCounter}}>
-            {childred}
+            {children}
         </CounterContext.Provider>
     )
 }

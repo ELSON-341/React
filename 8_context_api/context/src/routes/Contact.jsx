@@ -1,5 +1,5 @@
 
-const Contanct = () => {
+const Contact = () => {
   return (
     <div>
         <h1>Páginas de contantos</h1>
@@ -7,4 +7,4 @@ const Contanct = () => {
   )
 }
 
-export default Contanct
+export default Contact
