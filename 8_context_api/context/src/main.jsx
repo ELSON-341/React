@@ -32,7 +32,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <CounterContextProvider>
-    <RouterProvider router={router}/>
+      <RouterProvider router={router}/>
     </CounterContextProvider>
   </React.StrictMode>,
 )
