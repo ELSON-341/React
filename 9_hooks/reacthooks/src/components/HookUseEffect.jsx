@@ -21,7 +21,14 @@ const HookUseEffect = () => {
 
     useEffect(() => {
         console.log('Sou excutado apenas quando mada o anotherNumber')
-    })
+    }, [anotherNumber])
+
+    useEffect(() => {
+        const time = setTimeout(() => {
+            console.log('Hello world');
+            setNumber(anotherNumber + 1)
+        }, 2000)
+    }, [anotherNumber])
   return (
     <div>
         <h2>UseEffect</h2>
