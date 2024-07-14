@@ -31,16 +31,16 @@ const HookUseEffect = () => {
     }, [anotherNumber])
 
     // 4 - clearnup do useEffect
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            console.log('Hello word');
-            setAnotherNumber(anotherNumber + 1)
-        }, 2000)
-        return () => {
-            clearTimeout(timer)
-            console.log('Executol up');
-        }
-    }, [anotherNumber])
+    // useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //         console.log('Hello word');
+    //         setAnotherNumber(anotherNumber + 1)
+    //     }, 2000)
+    //     return () => {
+    //         clearTimeout(timer)
+    //         console.log('Executol up');
+    //     }
+    // }, [anotherNumber])
     
   return (
     <div>
