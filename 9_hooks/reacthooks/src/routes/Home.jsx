@@ -2,6 +2,7 @@
 import HooksUseReducer from "../components/HooksUseReducer"
 import HooksUseState from "../components/HooksUseState"
 import HookUseEffect from "../components/HookUseEffect"
+import HookUseRef from "../components/HookUseRef"
 
 import { useContext } from "react"
 import { SomeContext } from "../components/HookUseContext"
@@ -19,6 +20,7 @@ const Home = () => {
       <h2>useContet</h2>
       <p>Valor do contexto: {contextValue}</p>
       <hr/>
+      <HookUseRef/>
     </div>
   )
 }
