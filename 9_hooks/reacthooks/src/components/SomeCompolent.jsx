@@ -1,28 +1,24 @@
-import { forwardRef, useRef, useImperativeHandle } from "react"
+import { forwardRef, useRef, useImperativeHandle } from "react";
 
 const SomeCompolent = forwardRef((props, ref) => {
-        const localInputRef = useRef()
+    const localInputRef = useRef()
     
-        useImperativeHandle(ref, () => {
-            return {
-                validate: () => {
-                    if(localInputRef.current.value.length > 3) {
-                        localInputRef.current.value = ''
-                    }
+    useImperativeHandle( ref, ()=> {
+        return {
+            validate: () => {
+                if(localInputRef.current.value.length > 3) {
+                    localInputRef.current.value = ''
                 }
             }
-        })
+        }
+    })
 
-        console.log(localInputRef.current.validate())
-    
-      return (
-        <div>
-            <p>Insira no máximo 3 caracteres</p>
+    return (
+          <div>
+            <p>Isira no máximo 3 caracteres.</p>
             <input type="text" ref={localInputRef}/>
-            <hr />
-        </div>
-      )
-    }
-)
+          </div>
+        )
+})
 
 export default SomeCompolent
